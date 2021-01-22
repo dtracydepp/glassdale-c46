@@ -1,6 +1,6 @@
 export const Criminal = (criminalObj) => {
     return `
-    <article class="criminalsContainer">
+    <article class="criminals">
     <h4>${criminalObj.name}</h4>
     <p>Age: ${criminalObj.age}<p>
     <p>Conviction: ${criminalObj.conviction}<p>
