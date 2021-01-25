@@ -11,9 +11,13 @@ import {useOfficers, getOfficers} from "./officers/OfficerProvider.js"
 // getCriminals ()
 // useCriminals ()
 
-useConvictions ()
-getConvictions ()
+
+
 
 ConvictionSelect ()
 CriminalList ()
 OfficerList ()
+
+// Test ConvictionProvider
+// getConvictions () 
+// .then( () => console.log(useConvictions()))
