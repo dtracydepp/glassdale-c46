@@ -6,6 +6,14 @@
       "date": "2021-01-29",
       "text": "She ate the cookies!",
       "id": 1
+    },
+    {
+      "suspect": "Jordan",
+      "author": "Tracy",
+      "date": "2021-01-28",
+      "text": "He broke the window!",
+      "id": 2
     }
+    
   ]
 }
