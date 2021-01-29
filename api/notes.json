@@ -1,3 +1,11 @@
 {
-    "notes": []
+  "notes": [
+    {
+      "suspect": "Alina",
+      "author": "Tracy",
+      "date": "2021-01-29",
+      "text": "She ate the cookies!",
+      "id": 1
+    }
+  ]
 }
