@@ -12,8 +12,8 @@ import { OfficerSelect } from "./officers/OfficerSelect.js"
 
 useOfficers ()
 getOfficers()
-// getCriminals ()
-// useCriminals ()
+getCriminals ()
+useCriminals ()
 
 
 
