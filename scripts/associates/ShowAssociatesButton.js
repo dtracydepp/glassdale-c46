@@ -1,3 +1,5 @@
+import "./AssociatesList.js"
+
 export const ShowAssociatesButton = (criminalObj) => {
     return ` <button id="associates--${criminalObj.id}">Associate Alibis</button>`
 }
@@ -16,7 +18,8 @@ if (event.target.id.startsWith("associates--")){
         }
            
     })
-    console.log("customEvent:", customEvent) 
+    // console.log("customEvent:", customEvent) 
+    eventHub.dispatchEvent(customEvent)
 }
 
 })
