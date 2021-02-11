@@ -8,6 +8,7 @@ import { NoteForm } from "./notes/NoteForm.js"
 import { ShowNoteButton } from "./notes/ShowNotesButton.js"
 import { NoteList } from "./notes/NoteList.js"
 import { OfficerSelect } from "./officers/OfficerSelect.js"
+import { AssociatesList } from "./associates/AssociatesList.js"
 
 
 useOfficers ()
@@ -23,6 +24,8 @@ CriminalList ()
 OfficerList ()
 ShowNoteButton ()
 OfficerSelect()
+AssociatesList()
+
 
 
 // Test ConvictionProvider
