@@ -18,22 +18,48 @@ h1,h2,h3,h4,h5,h6 {
   letter-spacing: 2px;
 } */ 
 
-.criminalList, .notesList {
+.criminalList, .officerList {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-evenly;
 	align-content: space-between;
-}
+  }
 
-.criminals{
+.criminals, .officers, .notes{
 	border: 1px dotted black;
 	margin: 1rem;
 	padding: 0.5rem;
 	flex-basis: 25%;
 }
 
-.noteListContainer {
+
+.notesAside {
 	display: flex;
 	flex-direction: column;
-}
+  }
+  
+  .caseDataContainer {
+	display: flex;
+	padding: 1em;
+  }
+  
+  
+  .noteFormContainer {
+	display: flex;
+	flex-direction: column;
+	min-width: 30%;
+  }
 
+  
+/*   
+  .criminal {
+	border: 1px dotted red;
+  }
+  
+  .officer {
+	border: 1px dotted blue;
+  }
+   */
+  .note {
+	border: 1px dotted orchid;
+  }
