@@ -50,11 +50,14 @@ h1,h2,h3,h4,h5,h6 {
 	min-width: 30%;
   }
 
-  .criminals,.notes {
+  .criminals,.notes, .officers {
 	margin: 0.5rem;
 	padding: 0.5rem;
 	flex-basis: 25%;
 	background-color: white;
   }
   
+  .officers {
+	border: 1px dotted black;
+  }
   
