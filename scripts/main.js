@@ -11,6 +11,7 @@ import { OfficerSelect } from "./officers/OfficerSelect.js"
 import { AssociatesList } from "./associates/AssociatesList.js"
 import { getWitnesses, useWitnesses } from "./witnesses/WitnessDataProvider.js"
 import { WitnessList } from "./witnesses/WitnessList.js"
+import { WitnessStatementsBtn } from "./witnesses/WitnessStatementsBtn.js"
 
 
 useOfficers ()
@@ -28,7 +29,8 @@ OfficerList ()
 ShowNoteButton ()
 OfficerSelect()
 // AssociatesList()
-WitnessList()
+// WitnessList()
+WitnessStatementsBtn()
 
 
 
