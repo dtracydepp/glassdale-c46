@@ -10,6 +10,7 @@ eventHub.addEventListener("click", clickEvent =>{
 
    if(clickEvent.target.id ==="witnesses"){
     const customEvent = new CustomEvent("witnesStatementsClicked")
+    console.log(customEvent)
     eventHub.dispatchEvent(customEvent)
    }
     

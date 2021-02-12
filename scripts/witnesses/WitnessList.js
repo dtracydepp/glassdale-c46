@@ -2,6 +2,7 @@ import {getWitnesses, useWitnesses} from "./WitnessDataProvider.js"
 import {Witness} from "./Witness.js"
 
 const witnessesContainer= document.querySelector(".witnessesContainer")
+const eventHub = document.querySelector(".container")
 
 export const WitnessList = () => {
     getWitnesses()
@@ -31,3 +32,7 @@ export const WitnessList = () => {
     
     
 }
+
+eventHub.addEventListener("witnesStatementsClicked", customEvent => {
+    WitnessList()
+})
