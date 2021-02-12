@@ -1,3 +1,4 @@
+import {getCriminals, useCriminals} from "../criminals/CriminalDataProvider.js"
 import {getNotes, useNotes} from "./NoteDataProvider.js"
 import {NoteHTMLConverter} from  "./Note.js"
 
@@ -10,9 +11,10 @@ eventHub.addEventListener("showNotesClicked", customEvent => {
     NoteList()
 })
 
-const render = (noteArray) => {
+const render = (noteArray, criminalCollection) => {
     const allNotesConvertedToStrings = noteArray.map(noteObject =>{
-      return NoteHTMLConverter(noteObject)
+        const relatedCriminal = criminalCollection.find(criminal => criminal.id === noteObject.criminalId)
+      return NoteHTMLConverter(relatedCriminal)
       
 
         // convert the notes objects to HTML with NoteHTMLConverter
@@ -29,9 +31,11 @@ const render = (noteArray) => {
 
 export const NoteList = () => {
     getNotes()
+    .then(getCriminals)
         .then(() => {
             const allNotes = useNotes()
-            render(allNotes)
+            const criminals = useCriminals()
+            render(allNotes, criminals)
         })
 }
 

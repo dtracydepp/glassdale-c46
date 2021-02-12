@@ -1,4 +1,4 @@
-const contentTarget = document.querySelector(".noteListButton")
+const contentTarget = document.querySelector(".button__witnesses")
 
 export const WitnessStatementsBtn = () => {
     contentTarget.innerHTML = "<button id='witnesses'>Witness Statements</button>"
