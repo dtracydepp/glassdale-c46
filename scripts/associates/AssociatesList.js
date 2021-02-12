@@ -16,7 +16,7 @@ ${criminalObj.known_associates.map(associate =>{
     <div class"associate__alibi">Alibi: ${associate.alibi}</div>
     </section>`
 
-}).join(" ")}`
+}).join("")}`
 
 contentContainer.innerHTML = HTMLRep
 

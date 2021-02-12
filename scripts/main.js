@@ -9,13 +9,17 @@ import { ShowNoteButton } from "./notes/ShowNotesButton.js"
 import { NoteList } from "./notes/NoteList.js"
 import { OfficerSelect } from "./officers/OfficerSelect.js"
 import { AssociatesList } from "./associates/AssociatesList.js"
+import { getWitnesses, useWitnesses } from "./witnesses/WitnessDataProvider.js"
+import { WitnessList } from "./witnesses/WitnessList.js"
+import { WitnessStatementsBtn } from "./witnesses/WitnessStatementsBtn.js"
 
 
 useOfficers ()
 getOfficers()
 getCriminals ()
 useCriminals ()
-
+useWitnesses()
+getWitnesses()
 
 
 NoteForm()
@@ -24,7 +28,9 @@ CriminalList ()
 OfficerList ()
 ShowNoteButton ()
 OfficerSelect()
-AssociatesList()
+// AssociatesList()
+// WitnessList()
+WitnessStatementsBtn()
 
 
 
