@@ -48,7 +48,7 @@ const render = (officers) => {
 }
 
 eventHub.addEventListener("change", changeEvent => {
-    console.log(changeEvent, "officerselect: officer drop down")
+    // console.log(changeEvent, "officerselect: officer drop down")
     if (changeEvent.target.id === "officerSelect") {
         // Get the name of the selected officer
         const selectedOfficer = changeEvent.target.value

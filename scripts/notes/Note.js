@@ -1,3 +1,5 @@
+import {deleteNote} from "./NoteDataProvider.js"
+
 export const NoteHTMLConverter = (noteObject) => {
     return `
         <section class="note">
@@ -9,3 +11,16 @@ export const NoteHTMLConverter = (noteObject) => {
         </section>
     `
 }
+
+const eventHub = document.querySelector(".container")
+
+eventHub.addEventListener("click", clickEvent => {
+    if (clickEvent.target.id.startsWith("deleteNote--")) {
+        const [prefix, id] = clickEvent.target.id.split("--")
+
+        /*
+            Invoke the function that performs the delete operation.
+        */
+       deleteNote(id)
+    }
+})

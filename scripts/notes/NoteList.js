@@ -1,6 +1,9 @@
 import {getCriminals, useCriminals} from "../criminals/CriminalDataProvider.js"
-import {getNotes, useNotes, deleteNote} from "./NoteDataProvider.js"
+import {getNotes, useNotes} from "./NoteDataProvider.js"
 import {NoteHTMLConverter} from  "./Note.js"
+
+let allNotes = []
+let criminals = []
 
 // Query the DOM for the element that your notes will be added to 
 const contentTarget = document.querySelector(".notesContainer")
@@ -33,21 +36,16 @@ export const NoteList = () => {
     getNotes()
     .then(getCriminals)
         .then(() => {
-            const allNotes = useNotes()
-            const criminals = useCriminals()
-            render(allNotes, criminals)
+            allNotes = useNotes()
+             criminals = useCriminals()
+            render(allNotes,criminals)
         })
 }
 
 
-
-eventHub.addEventListener("click", clickEvent => {
-    if (clickEvent.target.id.startsWith("deleteNote--")) {
-        const [prefix, id] = clickEvent.target.id.split("--")
-
-        /*
-            Invoke the function that performs the delete operation.
-        */
-       deleteNote(id)
+eventHub.addEventListener("noteStateChanged", event =>{
+    if (contentTarget.innerHTML !== "") {
+        NoteList()
     }
 })
+

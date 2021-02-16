@@ -15,25 +15,46 @@
       "id": 2
     },
     {
-      "suspect": 2,
-      "author": "Tracy",
-      "date": "2021-02-10",
-      "text": "TEST",
-      "id": 4
+      "suspect": 16,
+      "author": "tracy",
+      "date": "2021-03-03",
+      "text": "Test",
+      "id": 8
     },
     {
-      "suspect": 3,
+      "criminalId": 38,
+      "author": "Tracy",
+      "date": "2021-03-26",
+      "text": "Test",
+      "id": 9
+    },
+    {
+      "suspect": 1,
+      "author": "Tracy",
+      "date": "2021-03-05",
+      "text": "Test",
+      "id": 13
+    },
+    {
+      "criminalId": "6",
       "author": "Tracy",
       "date": "2021-02-17",
-      "text": "TEST",
-      "id": 5
+      "text": "Test",
+      "id": 14
     },
     {
-      "suspect": 8,
+      "criminalId": 1,
       "author": "Tracy",
-      "date": "2021-02-24",
-      "text": "TEST",
-      "id": 6
+      "date": "2021-02-17",
+      "text": "Test 1",
+      "id": 15
+    },
+    {
+      "criminalId": 5,
+      "author": "Tracy",
+      "date": "2021-02-17",
+      "text": "Test 2",
+      "id": 16
     }
   ]
 }
