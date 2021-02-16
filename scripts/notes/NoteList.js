@@ -1,5 +1,5 @@
 import {getCriminals, useCriminals} from "../criminals/CriminalDataProvider.js"
-import {getNotes, useNotes} from "./NoteDataProvider.js"
+import {getNotes, useNotes, deleteNote} from "./NoteDataProvider.js"
 import {NoteHTMLConverter} from  "./Note.js"
 
 // Query the DOM for the element that your notes will be added to 
@@ -39,3 +39,15 @@ export const NoteList = () => {
         })
 }
 
+
+
+eventHub.addEventListener("click", clickEvent => {
+    if (clickEvent.target.id.startsWith("deleteNote--")) {
+        const [prefix, id] = clickEvent.target.id.split("--")
+
+        /*
+            Invoke the function that performs the delete operation.
+        */
+       deleteNote(id)
+    }
+})
