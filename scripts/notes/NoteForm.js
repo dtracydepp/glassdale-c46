@@ -34,7 +34,6 @@ const render = (criminalsArray) => {
     <button id="saveNote">Save Note</button>
     </form>
     `
-
 }
 
 export const NoteForm = () => {
@@ -42,19 +41,15 @@ export const NoteForm = () => {
         .then(() => {
             const listOfCriminals = useCriminals()
             render(listOfCriminals)
-
-
         })
 
-
-
-
-
 }
+
 
 // Handle browser-generated click event in component
 eventHub.addEventListener("click", clickEvent => {
     if (clickEvent.target.id === "saveNote") {
+        clickEvent.preventDefault()
 
         const criminalId = document.getElementById("note-criminalId").value
         const author = document.getElementById("note-author").value

@@ -3,7 +3,7 @@ import {getNotes, useNotes} from "./NoteDataProvider.js"
 import {NoteHTMLConverter} from  "./Note.js"
 
 let allNotes = []
-let criminals = []
+let allCriminals = []
 
 // Query the DOM for the element that your notes will be added to 
 const contentTarget = document.querySelector(".notesContainer")
@@ -14,9 +14,9 @@ eventHub.addEventListener("showNotesClicked", customEvent => {
     NoteList()
 })
 
-const render = (noteArray, criminalCollection) => {
+const render = (noteArray, allCriminals) => {
     const allNotesConvertedToStrings = noteArray.map(noteObject =>{
-        const relatedCriminal = criminalCollection.find(criminal => criminal.id === noteObject.criminalId)
+        const relatedCriminal = allCriminals.find(criminal => criminal.id === noteObject.criminalId)
       return NoteHTMLConverter(noteObject,relatedCriminal)
       
 
@@ -37,8 +37,8 @@ export const NoteList = () => {
     .then(getCriminals)
         .then(() => {
             allNotes = useNotes()
-             criminals = useCriminals()
-            render(allNotes,criminals)
+             allCriminals = useCriminals()
+            render(allNotes,allCriminals)
         })
 }
 

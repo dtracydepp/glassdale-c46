@@ -55,6 +55,20 @@
       "date": "2021-02-17",
       "text": "Test 2",
       "id": 16
+    },
+    {
+      "criminalId": 2,
+      "author": "Tracy",
+      "date": "2021-02-25",
+      "text": "Test 3",
+      "id": 17
+    },
+    {
+      "criminalId": 1,
+      "author": "Tracy",
+      "date": "2021-02-03",
+      "text": "TEST 4",
+      "id": 18
     }
   ]
 }
