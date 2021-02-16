@@ -51,14 +51,14 @@ eventHub.addEventListener("click", clickEvent => {
     if (clickEvent.target.id === "saveNote") {
         clickEvent.preventDefault()
 
-        const criminalId = document.getElementById("note-criminalId").value
+        const criminalId = parseInt(document.getElementById("note-criminalId").value)
         const author = document.getElementById("note-author").value
         const date = document.getElementById("note-date").value
         const text = document.getElementById("note-text").value
 
-        // Make a new object representation of a note
+        // Make a new object representation of a note; Keys match keys in notes.json, values match variables in event listener "saveNote"
         const newNote = {
-            "criminalId": parseInt(criminalId),
+            "suspect": criminalId,
             "author": author,
             "date": date,
             "text": text
