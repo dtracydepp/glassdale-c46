@@ -3,7 +3,7 @@ import { ShowAssociatesButton } from "../associates/ShowAssociatesButton.js"
 export const Criminal = (criminalObj, facilities) => {
     return `
     <div class="criminals">
-        <h4>${criminalObj.name}</h4>
+        <h3>${criminalObj.name}</h3>
         <div class="criminal__details">
             <p>Convicted for ${criminalObj.conviction}</p>
             <p>Arrested by ${criminalObj.arrestingOfficer}</p>
@@ -13,7 +13,7 @@ export const Criminal = (criminalObj, facilities) => {
             </p>
             <p>Age: ${criminalObj.age}</p>
             <div>
-                <h2>Facilities</h2>
+                <h4>Facilities</h4>
                 <ul>
                     ${facilities.map(f => `<li>${f.facilityName}</li>`).join("")}
                 </ul>

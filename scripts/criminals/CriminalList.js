@@ -11,7 +11,7 @@ const contentTarget = document.querySelector(".criminalsContainer")
 const eventHub = document.querySelector(".container")
 
 
-const render = (criminalsToRender, allFacilities, allRelationships) => {
+const renderToDom = (criminalsToRender, allFacilities, allRelationships) => {
     // Step 1 - Iterate all criminals
     contentTarget.innerHTML = criminalsToRender.map(
         (criminalObj) => {
@@ -57,7 +57,7 @@ export const CriminalList = () => {
                 const criminals = useCriminals()
 
                 // Pass all three collections of data to render()
-                render(criminals, facilities, crimFac)
+                renderToDom(criminals, facilities, crimFac)
             }
         )
 }
@@ -65,6 +65,8 @@ export const CriminalList = () => {
 
 
 // Listen for the custom event dispatched in ConvictionSelect
+
+// listener for crime drop down
 
 eventHub.addEventListener("crimeChosen", event => {
     // use the property added to the event detail  in Custom Event --crimeThatWasChosen
@@ -86,19 +88,22 @@ eventHub.addEventListener("crimeChosen", event => {
         // Get a copy of the array of criminals from the data provider
 
        const criminalsArray = useCriminals ()
+       const facilities = useFacilities()
+       const crimFac = useCriminalFacilities()
 
         // filter the criminals data down to the people that committed the crime 
 
         const filteredCriminalsArray = criminalsArray.filter(criminalObj => criminalObj.conviction === chosenConvictionObject.name)
 
         // invoke the render() and pass the filtered collection as an argument
-        renderToDom(filteredCriminalsArray)
+        renderToDom(filteredCriminalsArray, facilities, crimFac)
 
     } 
 
 
 })
 
+// listener for officer select dropdown
 eventHub.addEventListener("officerSelected", event => {
     // access the officer name that was selected by the user-- get from line 59 officerselect
     const officerName = event.detail.officer
@@ -107,18 +112,24 @@ eventHub.addEventListener("officerSelected", event => {
     // get the criminals that were arrested by that officer
 
     const criminalsArray = useCriminals()
+    const facilities = useFacilities()
+    const crimFac = useCriminalFacilities()
   
     // console.log ("criminals", criminalsArray)
     
     const filteredCriminalsArray = criminalsArray.filter(
-         (criminalObject) => {
-            if (criminalObject.arrestingOfficer === officerName) {
+         (criminalObj) => {
+            if (criminalObj.arrestingOfficer === officerName) {
                 return true
             }
             
         })
         // console.log("CriminalList:array of criminals filtered by only the criminals arrested by selected officer", filteredCriminalsArray)
     
-    renderToDom(filteredCriminalsArray)
+    renderToDom(filteredCriminalsArray,facilities,crimFac)
 })
 
+// event listener for "Show Facilities Button"
+// eventHub.addEventListener("facilitiesButtonClicked", customEvent => {
+//     FacilityList()
+// })

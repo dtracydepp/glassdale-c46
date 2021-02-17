@@ -12,6 +12,9 @@ import { AssociatesList } from "./associates/AssociatesList.js"
 import { getWitnesses, useWitnesses } from "./witnesses/WitnessDataProvider.js"
 import { WitnessList } from "./witnesses/WitnessList.js"
 import { WitnessStatementsBtn } from "./witnesses/WitnessStatementsBtn.js"
+import { DisplayFacilitiesButton } from "./facilities/DisplayFacilitiesButton.js"
+import "./facilities/FacilityList.js"
+
 
 
 useOfficers ()
@@ -31,6 +34,8 @@ OfficerSelect()
 // AssociatesList()
 // WitnessList()
 WitnessStatementsBtn()
+DisplayFacilitiesButton ()
+
 
 
 
