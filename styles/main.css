@@ -40,7 +40,12 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 
-
+.facilities{
+	border: 1px dotted black;
+	margin: 1rem;
+	padding: 0.5rem;
+	flex-basis: 25%;
+}
 
 .notesAside {
 	display: flex;
