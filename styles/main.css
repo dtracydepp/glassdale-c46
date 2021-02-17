@@ -25,6 +25,12 @@ h1,h2,h3,h4,h5,h6 {
 	align-content: space-between;
   }
 
+  .criminalList, .officerList {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	align-content: space-between;
+  }
 
 .criminals{
 	border: 1px dotted black;
@@ -53,7 +59,7 @@ h1,h2,h3,h4,h5,h6 {
 	min-width: 30%;
   }
 
-  .criminals,.notes {
+  .criminals,.notes,.officers {
 	margin: 0.5rem;
 	padding: 0.5rem;
 	flex-basis: 25%;
